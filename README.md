@@ -3,6 +3,11 @@
 ![PlantUML Editor](https://img.shields.io/badge/Electron-191970?style=for-the-badge&logo=mac&logoColor=white)
 ![PlantUML](https://img.shields.io/badge/PlantUML-FF79C6?style=for-the-badge&logo=plantuml&logoColor=white)
 
+<p align="center">
+  <img src="assets/preview.png" alt="Vista Previa de PlantUML Editor" width="100%">
+  <br><i>Ejemplo de la interfaz en modo oscuro renderizando un diagrama de clases POO offline.</i>
+</p>
+
 PlantUML Offline Editor es una herramienta minimalista y potente diseñada para diagramar con **PlantUML** de manera 100% desconectada (offline). Esta aplicación no requiere de servidores web externos, ya que incorpora su propia instancia del motor Java de PlantUML de forma autóctona.
 
 ## ✨ Características
