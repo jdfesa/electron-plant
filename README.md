@@ -9,6 +9,7 @@ PlantUML Offline Editor es una herramienta minimalista y potente diseñada para 
 
 - **100% Offline**: Renderizado local y privado. Cero dependencias web.
 - **Monaco Editor Integrado**: Escribe tu código UML con la misma experiencia visual que ofrece VS Code, junto a una interfaz nativa en modo oscuro.
+- **Navegación Pan & Zoom**: Explora diagramas gigantes cómodamente arrastrando el ratón sobre el lienzo oscuro y acercándote/alejándote fluidamente con la rueda del ratón.
 - **Renderizado Inmediato**: Visualiza y compila los cambios de tu diagrama al instante.
 - **Plantilla POO Definitiva (Dracula Theme)**: Al iniciar un nuevo proyecto vas a encontrarte con una plantilla avanzada (Cheat Sheet) demostrativa con la sintaxis de Programación Orientada a Objetos adaptada bajo un esquema de colores "estilo Dracula" de alto contraste.
 - **Exportación**: Guarda tus diagramas generados en formatos `PNG` o `SVG` directamente a tu PC en alta calidad.

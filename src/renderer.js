@@ -208,6 +208,49 @@ end note
   const formatSelect = document.getElementById('format-select');
   const renderBtn = document.getElementById('render-btn');
   const exportBtn = document.getElementById('export-btn');
+  const previewContainer = document.getElementById('preview-container');
+  const previewContent = document.getElementById('preview-content');
+
+  // --- PAN & ZOOM LOGIC ---
+  let scale = 1;
+  let panX = 0;
+  let panY = 0;
+  let isPanning = false;
+  let startX = 0;
+  let startY = 0;
+
+  function updateTransform() {
+    previewContent.style.transform = `translate(${panX}px, ${panY}px) scale(${scale})`;
+  }
+
+  previewContainer.addEventListener('wheel', (e) => {
+    // Zoom in/out without explicitly holding Ctrl, tracking scroll wheel globally inside canvas
+    e.preventDefault();
+    const zoomSensitivity = 0.002;
+    scale -= e.deltaY * zoomSensitivity;
+    scale = Math.min(Math.max(0.1, scale), 10);
+    updateTransform();
+  });
+
+  previewContainer.addEventListener('mousedown', (e) => {
+    isPanning = true;
+    startX = e.clientX - panX;
+    startY = e.clientY - panY;
+    previewContainer.style.cursor = 'grabbing';
+  });
+
+  window.addEventListener('mouseup', () => {
+    isPanning = false;
+    previewContainer.style.cursor = 'default';
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    if (!isPanning) return;
+    panX = e.clientX - startX;
+    panY = e.clientY - startY;
+    updateTransform();
+  });
+  // -------------------------
 
   formatSelect.addEventListener('change', (e) => {
     currentFormat = e.target.value;
