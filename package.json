@@ -1,0 +1,36 @@
+{
+  "name": "electron-plant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder build --mac",
+    "build:win": "electron-builder build --win",
+    "build:linux": "electron-builder build --linux"
+  },
+  "build": {
+    "appId": "com.electron.plantuml",
+    "productName": "PlantUML Editor",
+    "mac": {
+      "category": "public.app-category.developer-tools"
+    },
+    "extraResources": [
+      {
+        "from": "resources",
+        "to": "resources",
+        "filter": ["**/*"]
+      }
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^41.0.3",
+    "electron-builder": "^26.8.1"
+  },
+  "dependencies": {
+    "monaco-editor": "^0.55.1"
+  }
+}

@@ -1,0 +1,17 @@
+# dependencias
+node_modules/
+
+# builds y empaquetados
+dist/
+build/
+*.dmg
+*.exe
+*.AppImage
+
+# archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# logs locales
+npm-debug.log*
+yarn-error.log*

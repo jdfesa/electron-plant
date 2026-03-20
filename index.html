@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>PlantUML Offline Editor</title>
+    <link rel="stylesheet" href="src/style.css">
+  </head>
+  <body>
+    <div id="toolbar">
+      <h1>PlantUML Editor <span style="color: #888888; font-weight: 400; font-size: 12px; margin-left: 8px;">- Software desarrollado por José Sandoval</span></h1>
+      <div class="actions">
+        <select id="format-select">
+          <option value="svg">SVG</option>
+          <option value="png">PNG</option>
+        </select>
+        <button id="render-btn">Render</button>
+        <button id="export-btn">Export</button>
+      </div>
+    </div>
+    <div id="main-container">
+      <div id="editor-container"></div>
+      <div id="resizer"></div>
+      <div id="preview-container">
+        <div id="preview-content">
+          <p class="placeholder-text">Output will appear here...</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Load Monaco Editor -->
+    <!-- Note: Monaco needs path configuration in renderer.js -->
+    <script src="src/renderer.js"></script>
+  </body>
+</html>
