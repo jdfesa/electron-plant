@@ -35,19 +35,11 @@ Para probar la aplicación en modo desarrollo, simplemente corre:
 
 ## 📦 Empaquetado para Producción (Distribución)
 
-La estructura utiliza `electron-builder` para agrupar los binarios instalables para el escritorio. El ejecutable incrusta la carpeta `/resources` haciendo el motor gráfico 100% autónomo.
+Debido a que el **Entorno de Ejecución local de Java (JRE)** depende estrictamente del sistema operativo (Mac, Windows, Linux) y del procesador de cada computadora (Intel, ARM), el proceso de compilación para generar binarios finales para empaquetado de producción requiere unos ligeros pasos de adaptación previos. 
 
-Para compilar la aplicación final en entorno macOS (generará el instalador dentro de `dist/mac`):
+Para mantener la base limpia, hemos documentado rigurosamente este proceso industrial en una sección apartada.
 
-```bash
-npm run build
-```
-
-Para generar versiones de Windows o Linux (puede requerir emuladores Wine o ejecutarse preferentemente en sus sistemas nativos):
-```bash
-npm run build:win
-npm run build:linux
-```
+👉 **Por favor, dirígete a nuestra [Guía Oficial de Compilación Multiplataforma (BUILD_GUIDE.md)](BUILD_GUIDE.md) para aprender detalladamente a empaquetar ejecutables para tu sistema en particular.**
 
 ## 🛠️ Apéndice de Tecnologías
 

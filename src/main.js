@@ -37,7 +37,7 @@ ipcMain.handle('render-plantuml', async (event, { plantumlText, format }) => {
   return new Promise((resolve, reject) => {
     // Determine path to plantuml.jar
     const isPackaged = app.isPackaged;
-    const resourcesPath = isPackaged ? process.resourcesPath : path.join(__dirname, '..', 'resources');
+    const resourcesPath = isPackaged ? path.join(process.resourcesPath, 'resources') : path.join(__dirname, '..', 'resources');
     const jarPath = path.join(resourcesPath, 'plantuml.jar');
     
     // Determine path to java executable
